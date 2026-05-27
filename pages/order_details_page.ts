@@ -9,8 +9,8 @@ export class OrderDetailsPage extends BasePage {
   constructor(page: Page) {
     super(page);
     this.statusSelect = page.getByLabel(/status/i);
-    this.saveStatusButton = page.getByRole('button', { name: /zapisz|save|zmień status|zmien status/i });
-    this.generateLabelButton = page.getByRole('button', { name: /generuj etykietę|generuj etykiete|generate label/i });
+    this.saveStatusButton = page.getByRole('button', { name: /zapisz/});
+    this.generateLabelButton = page.getByRole('button', { name: /generuj etykietę/});
   }
 
   async expectOrderDetails(orderId: string): Promise<void> {

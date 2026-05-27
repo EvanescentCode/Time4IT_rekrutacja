@@ -8,9 +8,9 @@ export class LoginPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    this.emailInput = page.getByRole('textbox', { name: /e-mail|email|login|username/i });
-    this.passwordInput = page.getByLabel(/hasło|haslo|password/i);
-    this.submitButton = page.getByRole('button', { name: /zaloguj|log in|sign in/i });
+    this.emailInput = page.getByRole('textbox', { name: /e-mail/ });
+    this.passwordInput = page.getByLabel(/haslo/);
+    this.submitButton = page.getByRole('button', { name: /zaloguj/ });
   }
 
   async open(): Promise<void> {

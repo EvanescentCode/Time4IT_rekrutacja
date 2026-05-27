@@ -8,9 +8,9 @@ export class OrdersListPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    this.heading = page.getByRole('heading', { name: /lista zamówień|lista zamowien|zamówienia|zamowienia|orders/i });
-    this.searchInput = page.getByRole('textbox', { name: /id|numer|order|search|szukaj/i });
-    this.searchButton = page.getByRole('button', { name: /szukaj|search/i });
+    this.heading = page.getByRole('heading', { name: /lista zamówień/ });
+    this.searchInput = page.getByRole('textbox', { name: /id/ });
+    this.searchButton = page.getByRole('button', { name: /szukaj/ });
   }
 
   async open(): Promise<void> {
